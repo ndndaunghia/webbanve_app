@@ -61,7 +61,7 @@ export default class CalendarsScreen extends Component {
   }
 
   render() {
-    var {current, minDate} = this.props;
+    var {current, minDate} = this.props.route.params;
 
     return (
       <ScrollView style={styles.container}>
@@ -73,7 +73,7 @@ export default class CalendarsScreen extends Component {
           markedDates={{
             [this.state.selected]: {selected: true},
           }}
-          minDate={minDate}      
+          minDate={minDate} 
         />
       </ScrollView>
     );
